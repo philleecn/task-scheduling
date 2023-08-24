@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="phillee.mapper.SysTaskLogMapper">
+
+    <resultMap id="BaseResultMap" type="phillee.vo.SysTaskLog">
+            <result property="serverName" column="server_name" jdbcType="VARCHAR"/>
+            <result property="taskName" column="task_name" jdbcType="VARCHAR"/>
+            <result property="scheduleId" column="schedule_id" jdbcType="VARCHAR"/>
+            <result property="success" column="success" jdbcType="OTHER"/>
+            <result property="scheduleTime" column="schedule_time" jdbcType="DATE"/>
+            <result property="exceptionMessage" column="exception_message" jdbcType="VARCHAR"/>
+            <result property="exceptionStack" column="exception_stack" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        server_name,task_name,schedule_id,
+        success,schedule_time,exception_message,
+        exception_stack
+    </sql>
+</mapper>

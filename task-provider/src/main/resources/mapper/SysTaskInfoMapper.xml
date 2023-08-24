@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.phillee.mapper.SysTaskInfoMapper">
+
+    <resultMap id="BaseResultMap" type="phillee.vo.SysTaskInfo">
+            <id property="taskName" column="task_name" jdbcType="VARCHAR"/>
+            <result property="taskCron" column="task_cron" jdbcType="VARCHAR"/>
+            <result property="executeBean" column="execute_bean" jdbcType="VARCHAR"/>
+            <result property="taskEnable" column="task_enable" jdbcType="OTHER"/>
+            <result property="retryTime" column="retry_time" jdbcType="OTHER"/>
+            <result property="isConcurrent" column="is_concurrent" jdbcType="OTHER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        task_name,task_cron,execute_bean,
+        task_enable,retry_time,is_concurrent
+    </sql>
+</mapper>

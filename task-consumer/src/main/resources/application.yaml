@@ -1,0 +1,15 @@
+server:
+  port: 38090
+
+spring:
+  profiles:
+    default: dev
+
+  application:
+    name: task-consumer
+  cloud:
+    zookeeper:
+      connect-string: 127.0.0.1:2181
+      discovery:
+        enabled: true
+        register: true
